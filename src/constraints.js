@@ -18,7 +18,7 @@ const constraints = {
   username: {
     length: {
       minimum: 2,
-      maximum: 20
+      maximum: 32
     },
 
     presence: {
@@ -59,7 +59,7 @@ const constraints = {
 
   password: {
     length: {
-      minimum: 6
+      minimum: 8
     },
 
     presence: {
@@ -73,7 +73,7 @@ const constraints = {
     equality: 'password',
 
     length: {
-      minimum: 6
+      minimum: 8
     },
 
     presence: {
