@@ -88,7 +88,7 @@ class Bar extends Component {
       <AppBar color="primary" position="static">
         <Toolbar variant="regular">
           <Box flexGrow={1}>
-            <Typography color="inherit" variant="h6">{process.env.REACT_APP_NAME}</Typography>
+            <Typography color="inherit" variant="h6">{this.props.title}</Typography>
           </Box>
 
           {signedIn &&
@@ -128,12 +128,14 @@ class Bar extends Component {
 }
 
 Bar.defaultProps = {
+  title: process.env.REACT_APP_NAME,
   performingAction: false,
   signedIn: false
 };
 
 Bar.propTypes = {
   // Properties
+  title: PropTypes.String.isRequired,
   performingAction: PropTypes.bool.isRequired,
   signedIn: PropTypes.bool.isRequired,
   user: PropTypes.object,
